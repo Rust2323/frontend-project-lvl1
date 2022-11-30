@@ -10,7 +10,7 @@ const brainEven = () => {
     const number = Math.floor(1 + (Math.random() * 100));
     const answer = readlineSync.question(`Question: ${number}\nYour answer: `);
 
-    if (number % 2 === 0 && rightAnswers <= 3) {
+    if (number % 2 === 0) {
       if (answer === 'yes') {
         console.log('Correct!');
         rightAnswers += 1;
@@ -18,14 +18,13 @@ const brainEven = () => {
         console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLets try again, ${user}`);
         rightAnswers = 0;
       }
-    } else if (number % 2 !== 0) {
-      if (answer === 'no') {
-        console.log('Correct!');
-        rightAnswers += 1;
-      } else {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLets try again, ${user}`);
-        rightAnswers = 0;
-      }
+    } else
+    if (answer === 'no') {
+      console.log('Correct!');
+      rightAnswers += 1;
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLets try again, ${user}`);
+      rightAnswers = 0;
     }
   } while (rightAnswers < 3);
   return console.log(finish);
