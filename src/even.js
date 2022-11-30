@@ -7,7 +7,7 @@ const brainEven = () => {
   let rightAnswers = 0;
   const finish = `Congratulations, ${user}!`;
   do {
-    const number = Math.floor(Math.random() * 100);
+    const number = Math.floor(1 + (Math.random() * 100));
     const answer = readlineSync.question(`Question: ${number}\nYour answer: `);
 
     if (number % 2 === 0 && rightAnswers <= 3) {
