@@ -1,7 +1,9 @@
 import readlineSync from 'readline-sync';
-const askUser = (userName) => {
-    userName = readlineSync.question('May I have your name? ');
-    console.log('Hello, ' + userName + '!');
-};
-export default askUser;
 
+const askUser = (userName) => {
+  let user = userName;
+  user = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${user}!`);
+};
+
+export default askUser;
