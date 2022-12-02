@@ -1,6 +1,7 @@
 import {
   startGame, endGame, isAnswerRight, randomizer, gameQuestion,
-} from '../index.js';
+} from './index.js';
+import calcGame from './games/calc-game.js';
 
 const brainCalc = () => {
   const user = startGame();
@@ -10,20 +11,7 @@ const brainCalc = () => {
   for (let i = 0; i < 3; i += 1) {
     const arr = randomizer();
     const [number1, number2, arifmetics] = arr;
-    switch (arifmetics) {
-      case '-':
-        rightAnswer = number1 - number2;
-        break;
-      case '+':
-        rightAnswer = number1 + number2;
-        break;
-      case '*':
-        rightAnswer = number1 * number2;
-        break;
-      default:
-        rightAnswer = 0;
-    }
-    rightAnswer = String(rightAnswer);
+    rightAnswer = calcGame(number1, number2, arifmetics);
     const question = `${number1} ${arifmetics} ${number2}`;
     const answer = gameQuestion(question);
 

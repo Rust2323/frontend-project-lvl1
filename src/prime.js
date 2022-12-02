@@ -1,6 +1,7 @@
 import {
   startGame, endGame, isAnswerRight, randomizer, gameQuestion,
-} from '../index.js';
+} from './index.js';
+import primeGame from './games/prime-game.js';
 
 const brainPrime = () => {
   const user = startGame();
@@ -11,9 +12,7 @@ const brainPrime = () => {
     const arr = randomizer();
     const number = arr[0];
     const answer = gameQuestion(number);
-    if (number % 2 === 0 || number % 3 === 0 || number % 5 === 0 || number % 7 === 0) {
-      rightAnswer = 'no';
-    } else rightAnswer = 'yes';
+    rightAnswer = primeGame(number);
     numberOfRightAnswers = isAnswerRight(answer, rightAnswer, numberOfRightAnswers, user);
   }
 

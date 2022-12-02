@@ -1,6 +1,7 @@
 import {
   startGame, endGame, isAnswerRight, randomizer, gameQuestion,
-} from '../index.js';
+} from './index.js';
+import gcdGame from './games/gcd-game.js';
 
 const brainGcd = () => {
   const user = startGame();
@@ -9,18 +10,11 @@ const brainGcd = () => {
   let rightAnswer = '';
   for (let i = 0; i < 3; i += 1) {
     const arr = randomizer();
-    let [number1, number2] = arr;
+    const [number1, number2] = arr;
     const question = `${number1} ${number2}`;
     const answer = gameQuestion(question);
-    while (number1 !== number2) {
-      if (number1 > number2) {
-        number1 -= number2;
-      } else {
-        number2 -= number1;
-      }
-    }
-    rightAnswer = number1;
-    rightAnswer = String(rightAnswer);
+    rightAnswer = gcdGame(number1, number2);
+
     numberOfRightAnswers = isAnswerRight(answer, rightAnswer, numberOfRightAnswers, user);
   }
 

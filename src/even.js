@@ -1,6 +1,7 @@
 import {
   startGame, endGame, isAnswerRight, randomizer, gameQuestion,
-} from '../index.js';
+} from './index.js';
+import evenGame from './games/even-game.js';
 
 const brainEven = () => {
   const user = startGame();
@@ -11,9 +12,7 @@ const brainEven = () => {
     const arr = randomizer();
     const number = arr[0];
     const answer = gameQuestion(number);
-    if (number % 2 === 0) {
-      rightAnswer = 'yes';
-    } else rightAnswer = 'no';
+    rightAnswer = evenGame(number);
     numberOfRightAnswers = isAnswerRight(answer, rightAnswer, numberOfRightAnswers, user);
   }
 
