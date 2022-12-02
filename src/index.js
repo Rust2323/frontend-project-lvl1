@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync';
+import readlineSync, { question } from 'readline-sync';
 
 const startGame = (userName) => {
   let user = userName;
@@ -30,16 +30,22 @@ const isAnswerRight = (userAnswer, rightAnswer, countOfRightAnswers, userName) =
   return countOfRightAnswers;
 };
 
-const randomizer = (question) => {
+const randomizer = () => {
   const numberOne = Math.floor(1 + (Math.random() * 100));
-  let answer = question;
-  answer = readlineSync.question(`Question: ${numberOne}\nYour answer: `);
+  const numberTwo = Math.floor(1 + (Math.random() * 100));
+  const arifmetics = ['+', '-', '*'];
+  const countingArifmetics = Math.floor(Math.random() * 3);
   const arr = [];
-  arr.push(answer, numberOne);
+  arr.push(numberOne, numberTwo, arifmetics[countingArifmetics]);
 
   return arr;
 };
 
+const gameQuestion = (expression) => {
+  const answer = readlineSync.question(`Question: ${expression}\nYour answer: `);
+  return answer;
+};
+
 export {
-  startGame, endGame, isAnswerRight, randomizer,
+  startGame, endGame, isAnswerRight, randomizer, gameQuestion,
 };

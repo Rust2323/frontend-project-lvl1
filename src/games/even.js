@@ -1,17 +1,16 @@
 import {
-  startGame, endGame, isAnswerRight, randomizer,
-} from './index.js';
+  startGame, endGame, isAnswerRight, randomizer, gameQuestion,
+} from '../index.js';
 
-const user = startGame();
 const brainEven = () => {
+  const user = startGame();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let numberOfRightAnswers = 0;
   let rightAnswer = '';
   for (let i = 0; i < 3; i += 1) {
     const arr = randomizer();
-    const answer = arr[0];
-    const number = arr[1];
-
+    const number = arr[0];
+    const answer = gameQuestion(number);
     if (number % 2 === 0) {
       rightAnswer = 'yes';
     } else rightAnswer = 'no';
@@ -20,4 +19,5 @@ const brainEven = () => {
 
   endGame(numberOfRightAnswers, user);
 };
+
 export default brainEven;
