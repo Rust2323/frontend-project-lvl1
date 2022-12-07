@@ -36,11 +36,11 @@ const isAnswerRight = (userAnswer, rightAnswer, countOfRightAnswers, userName) =
 const randomizer = () => {
   const numberOne = Math.floor(1 + (Math.random() * 100));
   const numberTwo = Math.floor(1 + (Math.random() * 15));
-  const numberMin = Math.floor(1 + (Math.random() * 4));
+  const numberForArifmeticProgression = Math.floor(1 + (Math.random() * 4));
   const arifmetics = ['+', '-', '*'];
   const countingArifmetics = Math.floor(Math.random() * 3);
   const arr = [];
-  arr.push(numberOne, numberTwo, arifmetics[countingArifmetics], numberMin);
+  arr.push(numberOne, numberTwo, arifmetics[countingArifmetics], numberForArifmeticProgression);
 
   return arr;
 };
