@@ -15,6 +15,7 @@ const gameBody = (gameQuestion, expressionAndAnswer) => {
       numberOfRightAnswers += 1;
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLets try again, ${user}!`);
+      i = numberOfRounds;
     }
     if (numberOfRightAnswers === 3) {
       console.log(`Congratulations, ${user}!`);
