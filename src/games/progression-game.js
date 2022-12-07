@@ -20,7 +20,7 @@ const expressionAndAnswer = () => {
   }
   let rightAnswer = progression[randomStep - 1] + number2;
   rightAnswer = String(rightAnswer);
-  return [progression, rightAnswer];
+  return [progression.join(' '), rightAnswer];
 };
 
 const brainProgression = () => {
