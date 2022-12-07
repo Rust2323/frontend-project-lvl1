@@ -1,5 +1,12 @@
-const gcdGame = (number1, number2) => {
-  let rightAnswer = 0;
+import {
+  gameBody, randomizer,
+} from '../index.js';
+
+const gameQuestion = 'Find the greatest common divisor of given numbers.';
+
+const expressionAndAnswer = () => {
+  const [number1, number2] = randomizer();
+  const expression = `${number1} ${number2}`;
   let numberOne = number1;
   let numberTwo = number2;
   while (numberOne !== numberTwo) {
@@ -9,8 +16,13 @@ const gcdGame = (number1, number2) => {
       numberTwo -= numberOne;
     }
   }
-  rightAnswer = numberOne;
+  let rightAnswer = numberOne;
   rightAnswer = String(rightAnswer);
-  return rightAnswer;
+  return [expression, rightAnswer];
 };
-export default gcdGame;
+
+const brainGcd = () => {
+  gameBody(gameQuestion, expressionAndAnswer);
+};
+
+export default brainGcd;
