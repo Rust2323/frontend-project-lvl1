@@ -21,11 +21,10 @@ const expressionAndAnswer = () => {
     progression.push(nextnumber);
     nextnumber += number2;
   }
-
+  rightAnswer = progression[randomStep - 1] + number2;
   if (progression[0] === '..') {
     rightAnswer = progression[2] - progression[1];
   }
-  rightAnswer = progression[randomStep - 1] + number2;
   rightAnswer = String(rightAnswer);
   return [progression.join(' '), rightAnswer];
 };
