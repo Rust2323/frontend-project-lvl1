@@ -1,7 +1,7 @@
 ### linter status:
 
 <a href="https://codeclimate.com/github/Rust2323/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/4617cab953e688e3aad4/maintainability" /></a>
-[![Build Status](https://travis-ci.org/Rust2323/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Rust2323/frontend-project-lvl1)
+[![hexlet-check](https://github.com/Rust2323/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Rust2323/frontend-project-lvl1/actions/workflows/hexlet-check.yml)
 
 It,s a small games for everyone. You can play inside your terminal. If you want to download you'll need to do next steps:
 
