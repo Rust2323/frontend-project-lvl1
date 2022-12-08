@@ -19,13 +19,11 @@ const expressionAndAnswer = () => {
       || number !== 3
       || number !== 5
       || number !== 7)
-    ) {
-      rightAnswer = 'no';
-    }
-   else
-  rightAnswer = 'yes';
+  ) {
+    rightAnswer = 'no';
+  } else rightAnswer = 'yes';
 
-return [number, rightAnswer];
+  return [number, rightAnswer];
 };
 
 const brainPrime = () => {
