@@ -5,9 +5,10 @@
 It,s a small games for everyone. You can play inside your terminal. If you want to download you'll need to do next steps:
 
 1. git clone git@github.com:Rust2323/frontend-project-lvl1.git
-2. go to right directory by: cd frontend-project-lvl1
-3. Chek your node version, update, or install it
-4. Start one of the games by comands
+2. Chek your node version, update, or install it
+3. go to right directory by: cd frontend-project-lvl1
+4. use command "npm link"
+4. Start one of the games by comands:
 
 **brain-even**
 
