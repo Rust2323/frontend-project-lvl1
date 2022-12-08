@@ -26,7 +26,7 @@ const randomizer = () => {
   const numberOne = Math.floor(1 + (Math.random() * 100));
   const numberTwo = Math.floor(1 + (Math.random() * 15));
   const numberOfLine = Math.floor(5 + (Math.random() * 5));
-  const numberForProgression = Math.floor(1 + (Math.random() * 9));
+  const numberForProgression = Math.floor((Math.random() * 10));
   const arifmetics = ['+', '-', '*'];
   const countArifmetics = Math.floor(Math.random() * 3);
   const arr = [];
