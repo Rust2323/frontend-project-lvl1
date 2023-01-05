@@ -1,31 +1,30 @@
-import {
-  gameBody, randomizer,
-} from '../index.js';
+import {gameBody} from '../index.js';
 
-const gameQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+import {randomizer} from '../utils.js';
 
-const expressionAndAnswer = () => {
-  let rightAnswer = '';
-  const arr = randomizer();
-  const number = arr[0];
-  if (number === 1
-    || number === 2
+const gameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const getExpressionAndAnswer = () => {
+  let answer = '';
+  const number = randomizer();
+  if (number === 2
     || number === 3
     || number === 5
     || number === 7) {
-    rightAnswer = 'yes';
-  } else if ((number % 2 === 0
+    answer = 'yes';
+  } else if ((number === 1
+    ||number % 2 === 0
      || number % 3 === 0
      || number % 5 === 0
      || number % 7 === 0)) {
-    rightAnswer = 'no';
-  } else rightAnswer = 'yes';
+    answer = 'no';
+  } else answer = 'yes';
 
-  return [number, rightAnswer];
+  return [number, answer];
 };
 
 const brainPrime = () => {
-  gameBody(gameQuestion, expressionAndAnswer);
+  gameBody(gameTask, getExpressionAndAnswer);
 };
 
 export default brainPrime;

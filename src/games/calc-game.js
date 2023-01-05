@@ -1,32 +1,34 @@
-import {
-  gameBody, randomizer,
-} from '../index.js';
+import {gameBody} from '../index.js';
 
-const gameQuestion = 'What is the result of the expression?';
+import {randomizer, arifmetics} from '../utils.js';
 
-const expressionAndAnswer = () => {
-  let rightAnswer = 0;
-  const [number1, number2, arifmetics] = randomizer();
-  const expression = `${number1} ${arifmetics} ${number2}`;
-  switch (arifmetics) {
+const gameTask = 'What is the result of the expression?';
+
+const getExpressionAndAnswer = () => {
+  let answer = 0;
+  const number1 = randomizer();
+  const number2 = randomizer();
+  const arifmetic = arifmetics();
+  const expression = `${number1} ${arifmetic} ${number2}`;
+  switch (arifmetic) {
     case '-':
-      rightAnswer = number1 - number2;
+      answer = number1 - number2;
       break;
     case '+':
-      rightAnswer = number1 + number2;
+      answer = number1 + number2;
       break;
     case '*':
-      rightAnswer = number1 * number2;
+      answer = number1 * number2;
       break;
     default:
-      rightAnswer = 0;
+      answer = 0;
   }
-  rightAnswer = String(rightAnswer);
+  answer = String(answer);
 
-  return [expression, rightAnswer];
+  return [expression, answer];
 };
 
 const brainCalc = () => {
-  gameBody(gameQuestion, expressionAndAnswer);
+  gameBody(gameTask, getExpressionAndAnswer);
 };
 export default brainCalc;
