@@ -22,5 +22,4 @@ const gameBody = (gameTask, getExpressionAndAnswer) => {
   }
 };
 
-
-export {gameBody};
+export default gameBody;
