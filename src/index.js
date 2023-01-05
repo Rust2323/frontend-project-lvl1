@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 
-const gameBody = (gameQuestion, expressionAndAnswer) => {
+const gameBody = (gameTask, getExpressionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
   const user = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${user}!\n${gameQuestion}`);
+  console.log(`Hello, ${user}!\n${gameTask}`);
   let numberOfRightAnswers = 0;
   const numberOfRounds = 3;
   for (let i = 0; i < numberOfRounds; i += 1) {
-    const [gameExpression, rightAnswer] = expressionAndAnswer();
+    const [gameExpression, rightAnswer] = getExpressionAndAnswer();
     const userAnswer = readlineSync.question(`Question: ${gameExpression}\nYour answer: `);
     if (userAnswer === rightAnswer) {
       console.log('Correct!');
@@ -21,19 +21,6 @@ const gameBody = (gameQuestion, expressionAndAnswer) => {
     }
   }
 };
-const randomizer = () => {
-  const numberOne = Math.floor(1 + (Math.random() * 100));
-  const numberTwo = Math.floor(1 + (Math.random() * 15));
-  const numberOfLine = Math.floor(5 + (Math.random() * 5));
-  const numberForProgression = Math.floor((Math.random() * 10));
-  const arifmetics = ['+', '-', '*'];
-  const countArifmetics = Math.floor(Math.random() * 3);
-  const arr = [];
-  arr.push(numberOne, numberTwo, arifmetics[countArifmetics], numberForProgression, numberOfLine);
 
-  return arr;
-};
 
-export {
-  gameBody, randomizer,
-};
+export {gameBody};
