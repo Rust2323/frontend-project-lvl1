@@ -1,6 +1,6 @@
-import {gameBody} from '../index.js';
+import gameBody from '../index.js';
 
-import {randomizer, arifmetics} from '../utils.js';
+import { randomizer, arifmetics } from '../utils.js';
 
 const gameTask = 'What is the result of the expression?';
 

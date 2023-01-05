@@ -1,6 +1,6 @@
-import {gameBody} from '../index.js';
+import gameBody from '../index.js';
 
-import {randomizer} from '../utils.js';
+import { randomizer } from '../utils.js';
 
 const gameTask = 'What number is missing in the progression?';
 

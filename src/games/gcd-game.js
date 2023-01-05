@@ -1,13 +1,13 @@
-import {gameBody} from '../index.js';
+import gameBody from '../index.js';
 
-import {randomizer} from '../utils.js';
+import { randomizer } from '../utils.js';
 
 const gameTask = 'Find the greatest common divisor of given numbers.';
 
 const getExpressionAndAnswer = () => {
-  const number1 = randomizer();
-  const number2 = randomizer();
-  const expression = `${number1} ${number2}`;
+  const firstNumber = randomizer();
+  const secondNumber = randomizer();
+  const expression = `${firstNumber} ${secondNumber}`;
 
   const whatGcd = (number1, number2) => {
     let numberOne = number1;
@@ -20,9 +20,9 @@ const getExpressionAndAnswer = () => {
       }
     }
     return numberOne;
-  }
- 
-  let answer = String(whatGcd(number1, number2));
+  };
+
+  const answer = String(whatGcd(firstNumber, secondNumber));
   return [expression, answer];
 };
 
