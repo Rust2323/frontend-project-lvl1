@@ -21,22 +21,22 @@ You need to say even number or no.
 
 Second game calc. Expressions and numbers are always random.
 
-https://asciinema.org/a/dBXjeHolcYMXRrX3PJuzRgSw8
+[![asciicast](https://asciinema.org/a/dBXjeHolcYMXRrX3PJuzRgSw8.svg)](https://asciinema.org/a/dBXjeHolcYMXRrX3PJuzRgSw8)
 
 ## brain-gcd
 
 Another game. Find greatest divider of two numbers.
 
-https://asciinema.org/a/Jt40aREpVDQ7YiFy8y7GqdETD
+[![asciicast](https://asciinema.org/a/Jt40aREpVDQ7YiFy8y7GqdETD.svg)](https://asciinema.org/a/Jt40aREpVDQ7YiFy8y7GqdETD)
 
 ## brain-progression
 
 Game with arifmetic progressions. Numbers, and number of elements are always random.
 
-https://asciinema.org/a/LPxUnKRSTBDW2AZE90QSLKMox
+[![asciicast](https://asciinema.org/a/LPxUnKRSTBDW2AZE90QSLKMox.svg)](https://asciinema.org/a/LPxUnKRSTBDW2AZE90QSLKMox)
 
 ## brain-prime
 
 Game where you need to say is it prime number or no.
 
-https://asciinema.org/a/mslHEFsFC4ecXsFJIf76QZjl7
+[![asciicast](https://asciinema.org/a/mslHEFsFC4ecXsFJIf76QZjl7.svg)](https://asciinema.org/a/mslHEFsFC4ecXsFJIf76QZjl7)
