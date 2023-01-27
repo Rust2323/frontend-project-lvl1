@@ -15,28 +15,28 @@ It,s a small games for everyone. You can play inside your terminal. If you want 
 
 You need to say even number or no.
 
-https://asciinema.org/a/6aSrMLy9joagzD1fynkIBLG0M 
+https://asciinema.org/a/pnnDdjT6ja9r1xYAYOJu6QhHz
 
 ## brain-calc
 
 Second game calc. Expressions and numbers are always random.
 
-https://asciinema.org/a/k8rfG9478m6EflchjyCXT4FlN
+https://asciinema.org/a/dBXjeHolcYMXRrX3PJuzRgSw8
 
 ## brain-gcd
 
 Another game. Find greatest divider of two numbers.
 
-https://asciinema.org/a/zew2FICWcx3yqMI1mVFXRgrkR
+https://asciinema.org/a/Jt40aREpVDQ7YiFy8y7GqdETD
 
 ## brain-progression
 
 Game with arifmetic progressions. Numbers, and number of elements are always random.
 
-https://asciinema.org/a/U5WV8TttFdnzXDxsJWaTtawY7
+https://asciinema.org/a/LPxUnKRSTBDW2AZE90QSLKMox
 
 ## brain-prime
 
 Game where you need to say is it prime number or no.
 
-https://asciinema.org/a/VPz21nYQYiT4EdisSl5NKFqPE
+https://asciinema.org/a/mslHEFsFC4ecXsFJIf76QZjl7
