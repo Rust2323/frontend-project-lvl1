@@ -15,22 +15,7 @@ It,s a small games for everyone. You can play inside your terminal. If you want 
 
 You need to say even number or no.
 
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="asciinema-player.css" />
-</head>
-<body>
-  <div id="player"></div>
-  <script src="asciinema-player.min.js"></script>
-  <script>
-    AsciinemaPlayer.create(
-      '554996.cast',
-      document.getElementById('player'),
-      { cols: 120, rows: 30 }
-    );
-  </script>
-</body>
-</html>
+<script id="asciicast-pnnDdjT6ja9r1xYAYOJu6QhHz" src="https://asciinema.org/a/pnnDdjT6ja9r1xYAYOJu6QhHz.js" async></script>
 
 ## brain-calc
 
