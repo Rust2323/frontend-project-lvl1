@@ -1,33 +1,27 @@
 import gameBody from '../index.js';
 
-import { randomizer } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
-const gameTask = 'Find the greatest common divisor of given numbers.';
+const task = 'Find the greatest common divisor of given numbers.';
 
-const getExpressionAndAnswer = () => {
-  const firstNumber = randomizer();
-  const secondNumber = randomizer();
+const getGcd = (number1, number2) => {
+  if (number2 === 0) {
+    return number1;
+  }
+  return getGcd(number2, number1 % number2);
+};
+
+const getQuestionAndAnswer = () => {
+  const firstNumber = getRandomNumber(1, 30);
+  const secondNumber = getRandomNumber(1, 30);
   const expression = `${firstNumber} ${secondNumber}`;
 
-  const whatGcd = (number1, number2) => {
-    let numberOne = number1;
-    let numberTwo = number2;
-    while (numberOne !== numberTwo) {
-      if (numberOne > numberTwo) {
-        numberOne -= numberTwo;
-      } else {
-        numberTwo -= numberOne;
-      }
-    }
-    return numberOne;
-  };
-
-  const answer = String(whatGcd(firstNumber, secondNumber));
+  const answer = String(getGcd(firstNumber, secondNumber));
   return [expression, answer];
 };
 
 const brainGcd = () => {
-  gameBody(gameTask, getExpressionAndAnswer);
+  gameBody(task, getQuestionAndAnswer);
 };
 
 export default brainGcd;
