@@ -6,7 +6,7 @@ const gameBody = (task, getQuestionAndAnswer) => {
   console.log(`Hello, ${user}!\n${task}`);
   let numberOfRightAnswers = 0;
   const numberOfRounds = 3;
-    while(numberOfRightAnswers < numberOfRounds){
+  while (numberOfRightAnswers < numberOfRounds) {
     const [question, rightAnswer] = getQuestionAndAnswer();
     const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
     if (userAnswer !== rightAnswer) {
@@ -15,8 +15,7 @@ const gameBody = (task, getQuestionAndAnswer) => {
     console.log('Correct!');
     numberOfRightAnswers += 1;
   }
-    console.log(`Congratulations, ${user}!`);
-  
+  return console.log(`Congratulations, ${user}!`);
 };
 
 export default gameBody;
