@@ -15,7 +15,7 @@ It,s a small games for everyone. You can play inside your terminal. If you want 
 
 You need to say even number or no.
 
-<script id="asciicast-pnnDdjT6ja9r1xYAYOJu6QhHz" src="https://asciinema.org/a/pnnDdjT6ja9r1xYAYOJu6QhHz.js" async></script>
+[![asciicast](https://asciinema.org/a/pnnDdjT6ja9r1xYAYOJu6QhHz.svg)](https://asciinema.org/a/pnnDdjT6ja9r1xYAYOJu6QhHz)
 
 ## brain-calc
 
