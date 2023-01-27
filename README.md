@@ -6,16 +6,31 @@
 It,s a small games for everyone. You can play inside your terminal. If you want to download you'll need to do next steps:
 
 1. git clone git@github.com:Rust2323/frontend-project-lvl1.git
-2. Chek your node version, update, or install it
+2. chek your node version, update, or install it
 3. go to right directory by: cd frontend-project-lvl1
 4. use command "npm link"
-4. Start one of the games by comands:
+4. start one of the games by comands:
 
 ## brain-even
 
 You need to say even number or no.
 
-https://asciinema.org/a/pnnDdjT6ja9r1xYAYOJu6QhHz
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="asciinema-player.css" />
+</head>
+<body>
+  <div id="player"></div>
+  <script src="asciinema-player.min.js"></script>
+  <script>
+    AsciinemaPlayer.create(
+      '554996.cast',
+      document.getElementById('player'),
+      { cols: 120, rows: 30 }
+    );
+  </script>
+</body>
+</html>
 
 ## brain-calc
 
