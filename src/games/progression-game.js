@@ -1,40 +1,46 @@
 import gameBody from '../index.js';
 
-import { randomizer } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
-const gameTask = 'What number is missing in the progression?';
+const task = 'What number is missing in the progression?';
 
-const getExpressionAndAnswer = () => {
+const createProgression = (num1, num2, dotsPlace, progressionLength) => {
   const progression = [];
-  const number1 = randomizer();
-  const number2 = randomizer(1, 10);
-  const randomStep = randomizer(1, 10);
-  const lineLength = randomizer(5, 10);
-
-  let nextnumber = number1;
-  let answer = 0;
-  let maxLength = lineLength;
-  if (randomStep > lineLength) {
-    maxLength = randomStep;
+  let nextnumber = num1;
+  let maxLength = progressionLength;
+  if (dotsPlace > progressionLength) {
+    maxLength = dotsPlace;
   }
   for (let j = 0; j <= maxLength; j += 1) {
-    if (j === randomStep) {
+    if (j === dotsPlace) {
       progression.push('..');
-      nextnumber += number2;
+      nextnumber += num2;
     }
     progression.push(nextnumber);
-    nextnumber += number2;
+    nextnumber += num2;
   }
-  answer = progression[randomStep - 1] + number2;
+
+  return progression;
+};
+
+const getQuestionAndAnswer = () => {
+  const number1 = getRandomNumber();
+  const number2 = getRandomNumber(1, 10);
+  const randomStep = getRandomNumber(1, 10);
+  const lineLength = getRandomNumber(5, 10);
+
+  const progression = createProgression(number1, number2, randomStep, lineLength);
+
+  let answer = progression[randomStep - 1] + number2;
   if (progression[0] === '..') {
-    answer = progression[1] - (progression[2] - progression[1]);
+    answer = number1;
   }
-  answer = String(answer);
-  return [progression.join(' '), answer];
+
+  return [progression.join(' '), String(answer)];
 };
 
 const brainProgression = () => {
-  gameBody(gameTask, getExpressionAndAnswer);
+  gameBody(task, getQuestionAndAnswer);
 };
 
 export default brainProgression;
