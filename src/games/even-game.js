@@ -2,15 +2,19 @@ import gameBody from '../index.js';
 
 import getRandomNumber from '../utils.js';
 
-const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
+const isEven = (number) => (number % 2 === 0 ? true : false);
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getQuestionAndAnswer = () => {
-  const expression = getRandomNumber();
-  const answer = isEven(expression);
+  const question = getRandomNumber();
+  let answer = 'no';
+  const booleanAnswer = isEven(question);
+  if(booleanAnswer === true){
+    answer = 'yes';
+  }
 
-  return [expression, answer];
+  return [question, answer];
 };
 
 const brainEven = () => {
