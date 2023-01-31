@@ -31,9 +31,10 @@ const getQuestionAndAnswer = () => {
 
   const progression = createProgression(startNumber, progressionStep, hiddenIndex, lineLength);
 
-  const answer = startNumber + progressionStep * hiddenIndex;
+  const answer = String(startNumber + progressionStep * hiddenIndex);
+  const question = progression.join(' ');
 
-  return [progression.join(' '), String(answer)];
+  return [question, answer];
 };
 
 const brainProgression = () => {
