@@ -1,6 +1,6 @@
 import gameBody from '../index.js';
 
-import getRandomNumber from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const task = 'What number is missing in the progression?';
 
