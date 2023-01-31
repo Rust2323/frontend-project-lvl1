@@ -4,7 +4,7 @@ import getRandomNumber from '../utils.js';
 
 const task = 'What is the result of the expression?';
 
-const arifmetics = () => {
+const getArifmeticSimbol = () => {
   const arifmetic = ['+', '-', '*'];
   const countArifmetic = Math.floor(Math.random() * arifmetic.length);
   return arifmetic[countArifmetic];
@@ -12,10 +12,10 @@ const arifmetics = () => {
 
 const getQuestionAndAnswer = () => {
   let answer = '';
-  const number1 = getRandomNumber();
+  const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 15);
-  const arifmetic = arifmetics();
-  const expression = `${number1} ${arifmetic} ${number2}`;
+  const arifmetic = getArifmeticSimbol();
+  const question = `${number1} ${arifmetic} ${number2}`;
   switch (arifmetic) {
     case '-':
       answer = number1 - number2;
@@ -31,7 +31,7 @@ const getQuestionAndAnswer = () => {
   }
   answer = String(answer);
 
-  return [expression, answer];
+  return [question, answer];
 };
 
 const brainCalc = () => {
