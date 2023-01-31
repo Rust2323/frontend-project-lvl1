@@ -10,7 +10,7 @@ const getQuestionAndAnswer = () => {
   const question = getRandomNumber();
   let answer = 'no';
   const booleanAnswer = isEven(question);
-  if (booleanAnswer === true) {
+  if (booleanAnswer) {
     answer = 'yes';
   }
 

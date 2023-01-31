@@ -20,7 +20,7 @@ const getQuestionAndAnswer = () => {
   const number = getRandomNumber();
   let answer = 'no';
   const booleanAnswer = isPrime(number);
-  if (booleanAnswer === true) {
+  if (booleanAnswer) {
     answer = 'yes';
   }
 
