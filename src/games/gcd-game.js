@@ -14,10 +14,10 @@ const getGcd = (number1, number2) => {
 const getQuestionAndAnswer = () => {
   const firstNumber = getRandomNumber(1, 30);
   const secondNumber = getRandomNumber(1, 30);
-  const expression = `${firstNumber} ${secondNumber}`;
+  const question = `${firstNumber} ${secondNumber}`;
 
   const answer = String(getGcd(firstNumber, secondNumber));
-  return [expression, answer];
+  return [question, answer];
 };
 
 const brainGcd = () => {
