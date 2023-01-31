@@ -4,37 +4,34 @@ import getRandomNumber from '../utils.js';
 
 const task = 'What number is missing in the progression?';
 
-const createProgression = (num1, num2, dotsPlace, progressionLength) => {
+const createProgression = (startNumber, progressionStep, hiddenIndex, progressionLength) => {
   const progression = [];
-  let nextnumber = num1;
+  let nextnumber = startNumber;
   let maxLength = progressionLength;
-  if (dotsPlace > progressionLength) {
-    maxLength = dotsPlace;
+  if (hiddenIndex > progressionLength) {
+    maxLength = hiddenIndex;
   }
   for (let j = 0; j <= maxLength; j += 1) {
-    if (j === dotsPlace) {
+    if (j === hiddenIndex) {
       progression.push('..');
-      nextnumber += num2;
+      nextnumber += progressionStep;
     }
     progression.push(nextnumber);
-    nextnumber += num2;
+    nextnumber += progressionStep;
   }
 
   return progression;
 };
 
 const getQuestionAndAnswer = () => {
-  const number1 = getRandomNumber();
-  const number2 = getRandomNumber(1, 10);
-  const randomStep = getRandomNumber(1, 10);
-  const lineLength = getRandomNumber(5, 10);
+  const startNumber = getRandomNumber(1, 100);
+  const progressionStep = getRandomNumber(1, 20);
+  const hiddenIndex = getRandomNumber(1, 10);
+  const lineLength = getRandomNumber(5, 9);
 
-  const progression = createProgression(number1, number2, randomStep, lineLength);
+  const progression = createProgression(startNumber, progressionStep, hiddenIndex, lineLength);
 
-  let answer = progression[randomStep - 1] + number2;
-  if (progression[0] === '..') {
-    answer = number1;
-  }
+  const answer = startNumber + progressionStep * hiddenIndex;
 
   return [progression.join(' '), String(answer)];
 };
