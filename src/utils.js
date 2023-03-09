@@ -5,4 +5,4 @@ export const getRandomNumber = (start = 1, end = 100) => {
   return Math.floor(start + (Math.random() * (rightEnd)));
 };
 
-export const getAnswer = (booleanAnswer) => (booleanAnswer ? 'yes' : 'no');
+export const humanize = (booleanAnswer) => (booleanAnswer ? 'yes' : 'no');

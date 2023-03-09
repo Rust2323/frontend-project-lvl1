@@ -1,6 +1,6 @@
 import gameBody from '../index.js';
 
-import { getRandomNumber, getAnswer } from '../utils.js';
+import { getRandomNumber, humanize } from '../utils.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -19,7 +19,7 @@ const isPrime = (number) => {
 const getQuestionAndAnswer = () => {
   const number = getRandomNumber();
   const booleanAnswer = isPrime(number);
-  const answer = getAnswer(booleanAnswer);
+  const answer = humanize(booleanAnswer);
 
   return [number, answer];
 };

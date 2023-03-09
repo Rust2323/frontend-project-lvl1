@@ -6,7 +6,7 @@ const task = 'What is the result of the expression?';
 
 const getArifmeticSimbol = () => {
   const arifmetic = ['+', '-', '*'];
-  const countArifmetic = Math.floor(Math.random() * arifmetic.length);
+  const countArifmetic = getRandomNumber(0, arifmetic.length);
   return arifmetic[countArifmetic];
 };
 
